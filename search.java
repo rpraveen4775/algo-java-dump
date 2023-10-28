@@ -81,11 +81,36 @@ class Search {
      * unnecessary complex code
      */
     int ternarySearch(){ return 0; }
+
+    /*
+     * searching whether a list is a sublist of another list
+     */
     int subListSearch(){ return 0; }
+    /*
+     * This would be of no use, This would result in O(n) complexity
+     * as we would have to traverse the linked list to find the length
+     * skipList would be a better option and would provide O(sqrt(n)) complexity
+     */
     int binarySearchOnLinkedList(){ return 0; }
+
+    /*
+     * Binary Search on Infinite Array :
+     * if length of array is not known, we can not use binary search direclty
+     * Need to jump with help of steps increasing exponentialy
+     * decide low and high to search
+     * and then do a binary search
+     */
     int binarySearchOnInfiniteArray(){ return 0; }
+
+    /*
+     * Nearly sorted as in the element is swapped to either i+1 or i-1
+     * Idea is to compare the key with mid and mid-1 and mid+1 in binary search
+     */
     int binarySearchOnNearlySortedArray(){ return 0; }
 
+    /*
+     * binary search on sorted array with low and high index
+     */
     int binarySearchWithLowHigh(int arr[], int key,int low, int high ) {
         while ( low <= high) {
             int mid = (low + high) / 2;
@@ -106,6 +131,13 @@ class Search {
      * it is given
      * Find the element 
      */ 
+
+    /*
+     * This would take O(logn + k) where k is the number of duplicates
+     */
+    int binarySearchWithDuplicates(){ return 0; }
+
+
     int binarySearchOnSortedRotatedArray(int arr[], int key, int rotationIndex){
         int low = 0;
         int high = arr.length -1;
@@ -119,6 +151,10 @@ class Search {
         }
         return -1 ;
     }
+
+    /*
+     * Just a vairent with combination of binary search with rotation and duplicates.
+     */
     int binarySearchOnSortedRotatedArrayWithDuplicates(){ return 0; }
     static void printResponse(String searchName, int response){
         if ( response == -1 ) {
